@@ -1,2 +1,2 @@
-# Shop-Brand
+# ShopEase
 E-Commerce Website
