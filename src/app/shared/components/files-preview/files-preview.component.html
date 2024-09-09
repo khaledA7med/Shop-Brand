@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <ng-container *ngIf="files?.length! > 0">
+            <div class="col-md-2 col-sm-4 p-0" *ngFor="let item of files">
+                <div class="card m-1">
+                    <div class="row align-items-center g-0 overflow-hidden">
+                        <div class="col-3 h-100">
+                            <ng-container *ngIf="item.type?.startsWith('image')">
+                                <img id="file-preview" [src]="item.data" (error)="errorImages($event)"
+                                    class="img-fluid rounded shadow-sm">
+                            </ng-container>
+                            <div class="d-block h-100" *ngIf="!item.type?.startsWith('image')">
+                                <div class="file-output-icon rounded h-100 d-flex align-items-center justify-content-center"
+                                    [ngClass]="fileIcon(item?.type!).cls">
+                                    <i [ngClass]="fileIcon(item?.type!).ico"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="card-body py-2">
+                                <h6 class="card-title fs-13 text-nowrap">
+                                    <button (click)="downloadFile(item?.data!)" type="button" class="btn btn-link p-0">
+                                        {{item.name}}
+                                    </button>
+                                </h6>
+                                <p class="card-text fs-10">
+                                    <small class="text-body-secondary">{{util.formatBytes(+item.size!)}}</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="!files?.length">
+            <div class="col-12 alert alert-danger text-center">
+                No Documents
+            </div>
+        </ng-container>
+    </div>
+</div>

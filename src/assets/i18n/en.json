@@ -1,0 +1,18 @@
+{
+  "HEADER": {
+    "MORE": {
+      "TEXT": "More"
+    }
+  },
+  "MENUITEMS": {
+    "HOME": {
+      "TEXT": "home"
+    },
+    "MENU": {
+      "TEXT": "MENU"
+    },
+    "APPS": {
+      "TEXT": "Apps"
+    }
+  }
+}
