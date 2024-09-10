@@ -1,6 +1,18 @@
 export const AppRoutes = {
   Home: {
-    home: "home",
+    base: "dashboard",
+  },
+  Products: {
+    base: "products",
+  },
+  Cart: {
+    base: "cart",
+  },
+  About: {
+    base: "About",
+  },
+  ContactUs: {
+    base: "contact-us",
   },
   Error: {
     base: "pages",

@@ -45,7 +45,7 @@
       align-items: center;
       padding: $vertical-menu-item-padding-y $vertical-menu-item-padding-x;
       color: $vertical-menu-item-color;
-      font-size: $vertical-menu-item-font-size;
+      font-size: 1rem;
       font-family: $vertical-menu-item-font-family;
 
       &.active {

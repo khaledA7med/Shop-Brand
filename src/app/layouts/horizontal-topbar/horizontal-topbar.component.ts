@@ -71,7 +71,7 @@ export class HorizontalTopbarComponent implements OnInit {
   private setTitleFromRouteData(routeData: any) {
     if (routeData && routeData["title"]) this.title = routeData["title"];
     else this.title = "";
-    this.titleService.setTitle(this.title + "| ShopEase");
+    this.titleService.setTitle(this.title + " | ShopEase");
   }
 
   private getLatestChild(route: any) {

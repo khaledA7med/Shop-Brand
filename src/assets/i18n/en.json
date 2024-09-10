@@ -6,7 +6,19 @@
   },
   "MENUITEMS": {
     "HOME": {
-      "TEXT": "home"
+      "TEXT": "dashboard"
+    },
+    "PRODUCTS": {
+      "TEXT": "products"
+    },
+    "CART": {
+      "TEXT": "cart"
+    },
+    "ABOUT": {
+      "TEXT": "about"
+    },
+    "CONTACTUS": {
+      "TEXT": "contact us"
     },
     "MENU": {
       "TEXT": "MENU"

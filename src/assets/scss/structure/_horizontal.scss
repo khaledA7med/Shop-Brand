@@ -31,12 +31,13 @@
     background: $topnav-bg;
     padding: 0 calc(#{$grid-gutter-width} / 2);
     box-shadow: $horizontal-menu-box-shadow;
-    margin-top: $header-height;
+    margin-top: 60px;
     position: fixed;
     left: 0;
     right: 0;
     z-index: 100;
     width: 100%;
+    height: 40px;
     bottom: auto;
 
     @media (max-width: 575.98px) {
@@ -68,7 +69,7 @@
 
       .nav-link {
         color: $topnav-item-color;
-        padding: $horizontal-menu-item-padding-y $horizontal-menu-item-padding-x;
+        padding: 10px;
         white-space: nowrap;
         i {
           line-height: 1;
@@ -280,6 +281,9 @@
           display: block;
         }
       }
+    }
+    .main {
+      background-image: none;
     }
   }
 }
