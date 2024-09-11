@@ -5,7 +5,7 @@
 export const environment = {
   appVersion: require("../../package.json").version + "-dev",
   production: false,
-  baseURL: "https://localhost:44376/api/v1",
+  baseURL: "https://fakestoreapi.com/",
 };
 
 /*

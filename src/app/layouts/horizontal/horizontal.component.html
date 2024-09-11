@@ -1,26 +1,41 @@
 <div id="layout-wrapper">
     <!-- Top Bar -->
     <app-topbar (mobileMenuButtonClicked)="onToggleMobileMenu()"></app-topbar>
+
     <!-- Side Bar -->
     <!-- <app-sidebar></app-sidebar> -->
+
     <app-horizontal-topbar></app-horizontal-topbar>
-    <div class="main-content ">
+
+    <div class="main-content">
         <div class="page-content">
             <div class="container-fluid">
                 <!-- Main Content -->
-                <router-outlet></router-outlet>
-                <section class="hero">
-                    <div class="hero-content">
-                        <h1>Latest Fashion Arrivals</h1>
-                        <p>Discover new trends with ShopEase</p>
-                        <button class="cta-button">Shop Now</button>
-                    </div>
-                </section>
+                <router-outlet *ngIf="startRouting"></router-outlet>
+                <!-- Hero Section (Visible only when startRouting is false) -->
+                <div *ngIf="!startRouting" class="hero-container">
+                    <!-- Right Section (Image) -->
+                    <section class="hero-left" [@rightSecState]="orientation"
+                        (@rightSecState.done)="onAnimationDone($event)">
+                        <div class="overlay"></div>
+                        <img src="../../../assets/images/user-illustarator-1.png" alt="Hero Image" class="hero-image" />
+                    </section>
+                    <!-- Left Section (Text Content) -->
+                    <section class="hero-right" [@leftSecState]="orientation"
+                        (@leftSecState.done)="onAnimationDone($event)">
+                        <div class="hero-content">
+                            <h1 class="my-4">Welcome On ShopEase</h1>
+                            <h4 class="my-4">Start discovering our products</h4>
+                            <button class="cta-button btn btn-info" routerLink="/dashboard">Start Now</button>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
         <!-- Footer -->
         <app-footer></app-footer>
     </div>
 </div>
+
 <!-- Right Side Bar -->
 <app-rightsidebar (settingsButtonClicked)="onSettingsButtonClicked()"></app-rightsidebar>

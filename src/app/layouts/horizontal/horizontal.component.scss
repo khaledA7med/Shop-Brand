@@ -1,26 +1,50 @@
-.main {
-  background-image: url(../../../assets/images/black-friday-sales-sign-neon-light.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 80vh;
+/* General Styles */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 87vh; /* Adjust to the desired height */
+  position: relative;
 }
 
-.hero {
-  background: url(../../../assets/images/black-friday-sales-sign-neon-light.jpg)
-    no-repeat center center;
-  background-size: cover;
-  height: 87vh;
+/* Right Section - Image */
+.hero-left {
+  position: relative;
+  width: 50%;
+}
+
+.hero-left img {
+  width: 100%;
+  height: auto;
+  margin-left: 18%;
+}
+
+/* Left Section - Content */
+.hero-right {
+  position: relative;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: white;
   text-align: center;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+// /* Hero Overlay */
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.5); /* 50% black opacity */
+// }
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
 }
 
 .hero-content p {
@@ -31,12 +55,26 @@
 .cta-button {
   padding: 10px 20px;
   font-size: 1.2rem;
-  background-color: #ff6f00;
-  color: white;
-  border: none;
   cursor: pointer;
 }
 
-.cta-button:hover {
-  background-color: #ff8f00;
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
 }
